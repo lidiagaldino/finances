@@ -1,4 +1,4 @@
-package com.lidiagaldino.finances.domain;
+package com.lidiagaldino.finances.domain.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

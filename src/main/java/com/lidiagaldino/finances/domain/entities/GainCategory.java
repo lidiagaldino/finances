@@ -1,4 +1,4 @@
-package com.lidiagaldino.finances.domain;
+package com.lidiagaldino.finances.domain.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tbl_expense_category")
-public class ExpenseCategory {
+@Table(name = "tbl_gain_category")
+public class GainCategory {
   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
