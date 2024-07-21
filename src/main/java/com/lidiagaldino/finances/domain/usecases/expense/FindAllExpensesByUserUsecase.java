@@ -4,6 +4,6 @@ import java.util.Set;
 
 import com.lidiagaldino.finances.domain.entities.Expense;
 
-public interface FindAllExpensesByUser {
+public interface FindAllExpensesByUserUsecase {
   Set<Expense> findAllExpenses(Integer userId);
 }
