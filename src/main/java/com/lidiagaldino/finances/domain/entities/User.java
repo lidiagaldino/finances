@@ -1,5 +1,7 @@
 package com.lidiagaldino.finances.domain.entities;
 
+import org.hibernate.annotations.Formula;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
@@ -32,4 +34,13 @@ public class User {
   private String password;
   @Column(unique = true, nullable = false)
   private String email;
+
+  @Formula("(select sum(value) from tbl_gain where tbl_gain.user_id = id)")
+  private Float gains;
+  
+  @Formula("(select sum(value) from tbl_expense where tbl_expense.user_id = id)")
+  private Float expenses;
+
+  @Formula("(select sum(value) from tbl_gain where tbl_gain.user_id = id) - (select sum(value) from tbl_expense where tbl_expense.user_id = id)")
+  private Float balance;
 }
