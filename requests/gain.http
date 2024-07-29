@@ -1,0 +1,39 @@
+POST http://localhost:8080/gains
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJmaW5hbmNlcyIsInN1YiI6IjIiLCJleHAiOjE3MjU4NzkxMTYsImlhdCI6MTcyMjI3OTExNn0.EcvUhU6sbU-dQ0TwImEn0fumhCxdYA0mYac7QCzzDhP3LHEktzi0tr6UO-ojK4jHlpkdFd8ToWFSWq4DdT6w2NVRG7gYndTNYCANPlPrALOcThOeD2ClC-rZBQ8V1zuQKhVkfrgUuiMI0b5SE8Pn6xGdRxvJgZHzzjU3xO0rSQpHIq8giM43LEmaijexnYkdpPRGvqloSkDn2d6-CnbHryfuHSWr4NcVEj1iq6SrHE-Y9IiWYaKeqxXEPotovN8RdU4Q6_ZCdou4HzU7EyZ_0ofioU0lo33cpZ4fCbOGdhM01h4ONc4eG6mxsxfq_YhLsGMat9bquZ8AKJYk0l7YaQ
+Content-Type: application/json
+
+{
+  "value": 200,
+  "gainCategoryId": 1,
+  "userId": 2,
+  "bankId": 1,
+  "date": "2024-07-25T18:35:24.00Z",
+  "description": "Bread and milk"
+}
+
+###
+PUT http://localhost:8080/gains/1
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJmaW5hbmNlcyIsInN1YiI6IjIiLCJleHAiOjE3MjU4NzkxMTYsImlhdCI6MTcyMjI3OTExNn0.EcvUhU6sbU-dQ0TwImEn0fumhCxdYA0mYac7QCzzDhP3LHEktzi0tr6UO-ojK4jHlpkdFd8ToWFSWq4DdT6w2NVRG7gYndTNYCANPlPrALOcThOeD2ClC-rZBQ8V1zuQKhVkfrgUuiMI0b5SE8Pn6xGdRxvJgZHzzjU3xO0rSQpHIq8giM43LEmaijexnYkdpPRGvqloSkDn2d6-CnbHryfuHSWr4NcVEj1iq6SrHE-Y9IiWYaKeqxXEPotovN8RdU4Q6_ZCdou4HzU7EyZ_0ofioU0lo33cpZ4fCbOGdhM01h4ONc4eG6mxsxfq_YhLsGMat9bquZ8AKJYk0l7YaQ
+Content-Type: application/json
+
+{
+  "value": 210,
+  "gainCategoryId": 1,
+  "userId": 2,
+  "bankId": 1,
+  "date": "2024-07-25T18:35:24.00Z",
+  "description": "Bread and milk"
+}
+
+###
+GET http://localhost:8080/gains/list/2
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJmaW5hbmNlcyIsInN1YiI6IjIiLCJleHAiOjE3MjU4NzkxMTYsImlhdCI6MTcyMjI3OTExNn0.EcvUhU6sbU-dQ0TwImEn0fumhCxdYA0mYac7QCzzDhP3LHEktzi0tr6UO-ojK4jHlpkdFd8ToWFSWq4DdT6w2NVRG7gYndTNYCANPlPrALOcThOeD2ClC-rZBQ8V1zuQKhVkfrgUuiMI0b5SE8Pn6xGdRxvJgZHzzjU3xO0rSQpHIq8giM43LEmaijexnYkdpPRGvqloSkDn2d6-CnbHryfuHSWr4NcVEj1iq6SrHE-Y9IiWYaKeqxXEPotovN8RdU4Q6_ZCdou4HzU7EyZ_0ofioU0lo33cpZ4fCbOGdhM01h4ONc4eG6mxsxfq_YhLsGMat9bquZ8AKJYk0l7YaQ
+
+###
+GET http://localhost:8080/gains/2
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJmaW5hbmNlcyIsInN1YiI6IjIiLCJleHAiOjE3MjU4NzkxMTYsImlhdCI6MTcyMjI3OTExNn0.EcvUhU6sbU-dQ0TwImEn0fumhCxdYA0mYac7QCzzDhP3LHEktzi0tr6UO-ojK4jHlpkdFd8ToWFSWq4DdT6w2NVRG7gYndTNYCANPlPrALOcThOeD2ClC-rZBQ8V1zuQKhVkfrgUuiMI0b5SE8Pn6xGdRxvJgZHzzjU3xO0rSQpHIq8giM43LEmaijexnYkdpPRGvqloSkDn2d6-CnbHryfuHSWr4NcVEj1iq6SrHE-Y9IiWYaKeqxXEPotovN8RdU4Q6_ZCdou4HzU7EyZ_0ofioU0lo33cpZ4fCbOGdhM01h4ONc4eG6mxsxfq_YhLsGMat9bquZ8AKJYk0l7YaQ
+
+###
+DELETE http://localhost:8080/gains/2
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJmaW5hbmNlcyIsInN1YiI6IjIiLCJleHAiOjE3MjU4NzkxMTYsImlhdCI6MTcyMjI3OTExNn0.EcvUhU6sbU-dQ0TwImEn0fumhCxdYA0mYac7QCzzDhP3LHEktzi0tr6UO-ojK4jHlpkdFd8ToWFSWq4DdT6w2NVRG7gYndTNYCANPlPrALOcThOeD2ClC-rZBQ8V1zuQKhVkfrgUuiMI0b5SE8Pn6xGdRxvJgZHzzjU3xO0rSQpHIq8giM43LEmaijexnYkdpPRGvqloSkDn2d6-CnbHryfuHSWr4NcVEj1iq6SrHE-Y9IiWYaKeqxXEPotovN8RdU4Q6_ZCdou4HzU7EyZ_0ofioU0lo33cpZ4fCbOGdhM01h4ONc4eG6mxsxfq_YhLsGMat9bquZ8AKJYk0l7YaQ
+
