@@ -1,10 +1,9 @@
 package com.lidiagaldino.finances.application.usecases.user;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
 
 import com.lidiagaldino.finances.domain.entities.User;
+import com.lidiagaldino.finances.domain.exceptions.NotFoundException;
 import com.lidiagaldino.finances.domain.repositories.UserRepository;
 import com.lidiagaldino.finances.domain.usecases.user.FindUserByIdUsecase;
 
@@ -19,7 +18,7 @@ public class FindUserById implements FindUserByIdUsecase{
   @Override
   public User showUser(Integer userId) {
     var user = userRepository.show(userId);
-    if(user.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+    if(user.isEmpty()) throw new NotFoundException("USER");
     return user.get();
   }
 }

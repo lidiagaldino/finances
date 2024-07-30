@@ -3,6 +3,7 @@ package com.lidiagaldino.finances.application.usecases.expenseCategory;
 import org.springframework.stereotype.Service;
 
 import com.lidiagaldino.finances.domain.entities.ExpenseCategory;
+import com.lidiagaldino.finances.domain.exceptions.NotFoundException;
 import com.lidiagaldino.finances.domain.repositories.ExpenseCategoryRepository;
 import com.lidiagaldino.finances.domain.usecases.expenseCategory.FindExpenseCategoryByIdUsecase;
 
@@ -16,7 +17,7 @@ public class FindExpenseCategoryById implements FindExpenseCategoryByIdUsecase{
   @Override
   public ExpenseCategory showExpenseCategory(Integer id) {
     var expenseCategory = expenseCategoryRepository.showExpenseCategory(id);
-    if(expenseCategory.isEmpty()) throw new RuntimeException("expense category not found");
+    if(expenseCategory.isEmpty()) throw new NotFoundException("EXPENSE_CATEGORY");
     return expenseCategory.get();
   }
 }

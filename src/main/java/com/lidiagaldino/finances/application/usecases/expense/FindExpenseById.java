@@ -3,6 +3,7 @@ package com.lidiagaldino.finances.application.usecases.expense;
 import org.springframework.stereotype.Service;
 
 import com.lidiagaldino.finances.domain.entities.Expense;
+import com.lidiagaldino.finances.domain.exceptions.NotFoundException;
 import com.lidiagaldino.finances.domain.repositories.ExpenseRepository;
 import com.lidiagaldino.finances.domain.usecases.expense.FindExpenseByIdUsecase;
 
@@ -17,7 +18,7 @@ public class FindExpenseById implements FindExpenseByIdUsecase {
 
   public Expense showExpense(Integer id) {
     var expense = expenseRepository.show(id);
-    if(expense.isEmpty()) throw new RuntimeException("expense not found");
+    if(expense.isEmpty()) throw new NotFoundException("EXPENSE");
     return expense.get();
   }
   

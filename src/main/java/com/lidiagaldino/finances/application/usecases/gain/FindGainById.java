@@ -3,6 +3,7 @@ package com.lidiagaldino.finances.application.usecases.gain;
 import org.springframework.stereotype.Service;
 
 import com.lidiagaldino.finances.domain.entities.Gain;
+import com.lidiagaldino.finances.domain.exceptions.NotFoundException;
 import com.lidiagaldino.finances.domain.repositories.GainRepository;
 import com.lidiagaldino.finances.domain.usecases.gain.FindGainByIdUsecase;
 
@@ -16,7 +17,7 @@ public class FindGainById implements FindGainByIdUsecase {
 
   public Gain show(Integer id) {
     var gain = this.gainRepository.show(id) ;
-    if(gain.isEmpty()) throw new RuntimeException("gain not found");
+    if(gain.isEmpty()) throw new NotFoundException("GAIN");
     return gain.get();
   }
 }

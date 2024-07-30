@@ -3,6 +3,7 @@ package com.lidiagaldino.finances.application.usecases.gainCategory;
 import org.springframework.stereotype.Service;
 
 import com.lidiagaldino.finances.domain.entities.GainCategory;
+import com.lidiagaldino.finances.domain.exceptions.NotFoundException;
 import com.lidiagaldino.finances.domain.repositories.GainCategoryRepository;
 import com.lidiagaldino.finances.domain.usecases.gainCategory.FindGainCategoryByIdUsecase;
 
@@ -16,7 +17,7 @@ public class FindGainCategoryById implements FindGainCategoryByIdUsecase {
 
   public GainCategory show(Integer id) {
     var category = gainCategoryRepository.showGainCategory(id);
-    if(category.isEmpty()) throw new RuntimeException("gain category not found");
+    if(category.isEmpty()) throw new NotFoundException("GAIN_CATEGORY");
     return category.get();
   }
 }
